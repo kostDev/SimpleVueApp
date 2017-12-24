@@ -1,0 +1,65 @@
+body{
+	background-color: #171814;
+	margin: auto;
+	display: table;
+}
+
+#tools > p {
+	box-shadow: 2px 2px solid white;
+	font-size: 27px;
+	font-weight: bold;
+	color: lightgreen;
+}
+
+content{
+
+}
+
+input{
+	border-style: none;
+	width: 240px;
+	height: 40px;
+	font-size: 27px;
+	font-weight: bold;
+}
+
+button{
+	background-color: #4AAF68;
+	color: white;
+	border-style: none;
+	height: 42px;
+	font-size: 27px;
+	font-style: "Helvetica";
+
+}
+
+button:hover{
+	background-color: #2E934C;
+}
+
+.twit{
+	background-color: #272822;
+	box-shadow: 0 0 4px black;
+	border-bottom: 4px solid lightgreen;
+	border-radius: 10px;
+	height: 150px;
+}
+
+.twit > h3{
+	padding-left: 5px;
+	background-color: #494A44;
+	box-shadow: 2px;
+	color: white;
+}
+
+.twit > p{
+	text-align: justify;
+	color:silver;
+	padding-left: 5px;
+	padding-top: 10px;
+}
+
+.twit > span > p{
+	padding-top: 5%;
+	color: lightblue;
+}

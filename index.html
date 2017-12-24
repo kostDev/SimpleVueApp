@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Data</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+
+        <div id="tools">
+            <p style="color:silver;">Enter what you want to find</p>
+            <p>#
+                <input id="tag" type="text"><button v-on:click="loadData(tag.value)">ok</button><button v-on:click="reload" id="reload">X</button>
+            </p>
+        </div>
+
+        <content>
+
+
+            <span v-if="state()" v-for="item in obj">
+	        	<div class="twit">
+	        		<h3 align="center">
+	        			#{{tag_name}}_{{item.medium}} : {{item.objectid}}
+	        		</h3>
+	        		<p>
+	        			{{item.text}}
+	        		</p>
+	        		<span>
+	        			<p align="center">
+	        				likes: {{item.likes}}, comments: {{item.comments}}, shares: {{item.shares}}
+	        			</p>
+	        		</span>
+	        	</div>
+            </span>
+        </content>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+    	reload.style.visibility = "hidden";
+    	reload.style.background = "red";
+    </script>
+</body>
+
+</html>
