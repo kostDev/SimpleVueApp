@@ -1,10 +1,10 @@
 let instance = axios.create({
-  baseURL: 'http://localhost:8085'
+  baseURL: 'http://178.137.130.70:8080'
 });
 let vue = new Vue({
 	el: "#vue-app",
 	data: {
-		obj: null,
+		tw_arr: null,
 		tag_name: '#Coin'
 	},
 	methods: {
@@ -18,9 +18,9 @@ let vue = new Vue({
 			tag.value = '';
 			// get data from server by tw_tag
 			instance.get('/search/' + tw_tag)
-	    		.then(function(response) {
-	    		 	this.obj = response;
-	        		console.log(response);
+	    		.then(response => {
+	    			vue.tw_arr = response.data;
+	        		console.log(response.data);
 	    		})
 	    		.catch(function(error) {
 	        		console.log(error);
@@ -48,8 +48,11 @@ let vue = new Vue({
 				}
 	    	];
 		},
+		setData: function (data) {
+			this.tw_arr = data;
+		},
 		state: function () {
-			return !!this.obj;
+			return !!this.tw_arr;
 		}
 	}
 });

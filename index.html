@@ -22,10 +22,10 @@
         <content>
 
 
-            <span v-if="state()" v-for="item in obj">
+            <span v-if="state()" v-for="item in tw_arr">
 	        	<div class="twit">
 	        		<h3 align="center">
-	        			#{{tag_name}}_{{item.medium}} : {{item.objectid}}
+	        			#{{tag_name}}_{{item.key.medium}} : {{item.key.objectid}}
 	        		</h3>
 	        		<p>
 	        			{{item.text}}
