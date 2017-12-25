@@ -1,5 +1,5 @@
 let instance = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: 'localhost:8080'
 });
 let vue = new Vue({
 	el: "#vue-app",
@@ -13,6 +13,8 @@ let vue = new Vue({
 		},
 		loadData: function (data) {
 			let tw_tag = this.tag_name = data;
+			// save from null data or few chars
+			if(data.length < 3) vue.reload();
 			//clear input
 			reload.style.visibility='visible';
 			tag.value = '';
@@ -21,6 +23,7 @@ let vue = new Vue({
 	    		.then(response => {
 	    			vue.tw_arr = response.data;
 	        		console.log(response);
+	        		console.log(vue.tw_arr);
 	    		})
 	    		.catch(function(error) {
 	        		console.log(error);

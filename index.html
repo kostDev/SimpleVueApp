@@ -24,17 +24,20 @@
 
             <span v-if="state()" v-for="item in tw_arr">
 	        	<div class="twit">
-	        		<h3 align="center">
-	        			#{{tag_name}}_{{item.key.medium}} : {{item.key.objectid}}
-	        		</h3>
+	        		<h4 align="center">
+	        			@{{item.fromUser}} #{{tag_name}}
+	        		</h4>
 	        		<p>
+	        			<a v-bind:href="'http://twitter.com/' + item.fromUser"><img v-bind:src=item.userImg v-bind:alt="'@' + item.fromUser">
+	        			</a>
 	        			{{item.text}}
 	        		</p>
 	        		<span>
 	        			<p align="center">
-	        				likes: {{item.likes}}, comments: {{item.comments}}, shares: {{item.shares}}
+	        				likes: {{item.likes}}, shares: {{item.shares}}
 	        			</p>
 	        		</span>
+	        		<p align="center">{{item.key.medium}} : {{item.date}}</p>
 	        	</div>
             </span>
         </content>

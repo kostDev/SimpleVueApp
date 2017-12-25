@@ -42,10 +42,11 @@ button:hover{
 	box-shadow: 0 0 4px black;
 	border-bottom: 4px solid lightgreen;
 	border-radius: 10px;
-	height: 150px;
+	height: auto;
+	max-width: 400px;
 }
 
-.twit > h3{
+.twit > h4{
 	padding-left: 5px;
 	background-color: #494A44;
 	box-shadow: 2px;
@@ -53,13 +54,12 @@ button:hover{
 }
 
 .twit > p{
-	text-align: justify;
+
 	color:silver;
 	padding-left: 5px;
 	padding-top: 10px;
 }
 
 .twit > span > p{
-	padding-top: 5%;
 	color: lightblue;
 }
