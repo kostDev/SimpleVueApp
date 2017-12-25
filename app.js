@@ -1,5 +1,5 @@
 let instance = axios.create({
-  baseURL: 'http://178.137.130.70:8080'
+  baseURL: 'http://localhost:8080'
 });
 let vue = new Vue({
 	el: "#vue-app",
@@ -20,7 +20,7 @@ let vue = new Vue({
 			instance.get('/search/' + tw_tag)
 	    		.then(response => {
 	    			vue.tw_arr = response.data;
-	        		console.log(response.data);
+	        		console.log(response);
 	    		})
 	    		.catch(function(error) {
 	        		console.log(error);
