@@ -1,5 +1,5 @@
 let instance = axios.create({
-  baseURL: 'localhost:8080'
+  baseURL: 'http://localhost:8080'
 });
 let vue = new Vue({
 	el: "#vue-app",
