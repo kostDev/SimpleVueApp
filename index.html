@@ -15,7 +15,7 @@
         <div id="tools">
             <p style="color:silver;">Enter what you want to find</p>
             <p>#
-                <input id="tag" type="text"><button v-on:click="loadData(tag.value)">ok</button><button v-on:click="reload" id="reload">X</button>
+                <input id="tag" type="text" v-on:keyup.enter="loadData(tag.value)"><button v-on:click="loadData(tag.value)">ok</button><button v-on:click="reload" id="reload">X</button>
             </p>
         </div>
 
